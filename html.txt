@@ -1,0 +1,15 @@
+base标签：
+可以让所有的<a>标签都有相同的属性
+CSS:
+引入css:<link rel="stylesheet" href="css/xxx.css">
+css继承性：所有字相关的属性可以继承 color font-xxx
+css优先级：内联样式 >ID选择器> 类选择器> 标签选择器
+ inline        块转化行
+ block         行转化块
+ none          标签被移除(visibility:hidden隐藏占用空间)
+ inline-block  行内块
+
+              设置宽高    边距         独占行
+行内元素         否       左右           否
+块元素           是     上下左右         是
+行内块元素       是       左右           否

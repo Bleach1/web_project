@@ -1,0 +1,104 @@
+a {
+    color: yellow;
+    background-color: yellow;
+    font-size: 25px;
+    width: 25px;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    font-style: normal; /*字体样式*/
+    font-family: "狂草", serif, sans-serif; /*一般将汉字转化成utf-8字符串，serif衬线体修饰字体,sans-serif前面字体查找失败默认字体*/
+    font-weight: 700; /*字体粗细*/
+    letter-spacing: normal; /*字间距*/
+    word-spacing: normal; /*单词间距*/
+    text-align: center; /*水平居中*/
+    line-height: 50px; /*垂直居中*/
+    text-decoration: none; /*文本下划线*/
+    text-indent: inherit;
+    /*只能设置于块级标签  首行缩进
+         text-indent: -9999px 一般用于网站的h1标题logo的seo优化*/
+    white-space: normal; /*空白行*/
+    word-break: normal; /*自动换行*/
+}
+
+/*所有标签*/
+* {
+    color: rgb(255, 255, 0);
+    background-color: rgb(7%, 8%, 9%);
+    font: italic 700 20px 微软雅黑; /*字体样式  粗细  大小  字体 合写*/
+}
+
+/*id选择器*/
+#head {
+    font: 20px/1.5em "黑体"; /*设置行高20*1.5=30px*/
+}
+
+/*类选择器*/
+.head {
+}
+
+/*标签指定式选择器(class  id)*/
+h3.class {
+}
+
+p#one {
+}
+
+/*后代选择器 important*/
+.class li {
+}
+
+/*此类中所有的li标签*/
+
+/*并级选择器*/
+h1, h2, p {
+}
+
+/*子元素选择器*/
+div > p {
+}
+
+/*属性选择器*/
+h1[id] {
+}
+
+h1[id][class] {
+}
+
+/*伪类  注意顺序*/
+a:link { /*未访问过样式*/
+}
+
+:visited { /*访问过的*/
+}
+
+:hover { /*鼠标悬停*/
+}
+
+:active { /*点击*/
+}
+
+:focus { /*获取到焦点*/
+}
+
+/*伪元素*/
+:first-line { /*控制第一行*/
+}
+
+:first-letter { /*控制第一个元素 */
+}
+
+:first-child { /*控制第一个子元素*/
+}
+
+:before, :after {
+    content: "------";
+    display: block;
+}
+
+
+
+
+
+
+

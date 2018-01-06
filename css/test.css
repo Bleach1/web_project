@@ -19,6 +19,7 @@ a {
          text-indent: -9999px 一般用于网站的h1标题logo的seo优化*/
     white-space: normal; /*空白行*/
     word-break: normal; /*自动换行*/
+    border: 5px solid red; /*边框合写*/
 }
 
 /*所有标签*/

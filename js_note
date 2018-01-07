@@ -1,0 +1,63 @@
+定义变量var x=1;
+数据类型：
+        Number:
+               123; // 整数123
+               0.456; // 浮点数0.456
+               1.2345e3; // 科学计数法表示1.2345x1000，等同于1234.5
+               -99; // 负数
+               NaN; // NaN表示Not a Number，当无法计算结果时用NaN表示
+               Infinity; // Infinity表示无限大，当数值超过了JavaScript的Number所能表示的最大值时，就表示为Infinity
+        字符串:
+               `这是一个
+               多行
+               字符串`;//多行字符串表示~
+        布尔值:
+        null undefined
+        数组:
+             JavaScript的数组可以包括任意数据类型
+             slice=>>substring
+             push()向Array的末尾添加若干元素
+             如果要往Array的头部添加若干元素，使用unshift()方法，shift()方法则把Array的第一个元素删掉
+
+        对象:
+             var person = {
+                 name: 'Bob',
+                 age: 20,
+                 tags: ['js', 'web', 'mobile'],
+                 city: 'Beijing',
+                 hasCar: true,
+                 zipCode: null
+             };
+             delete xiaoming.age; // 删除age属性
+        变量:
+Array、Map和Set都属于iterable类型 for of  迭代
+
+
+函数:
+     function abs(x){}
+     var abs=function(x){}
+     关键字arguments，它只在函数内部起作用，并且永远指向当前函数的调用者传入的所有参数
+     JavaScript函数允许接收任意个参数 reset
+     function foo(a, b, ...rest) {
+         console.log('a = ' + a);
+         console.log('b = ' + b);
+         console.log(rest);
+     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

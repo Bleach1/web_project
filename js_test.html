@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 练习页面</title>
+    <link rel="stylesheet" href="css/vue_test.css">
+</head>
+<body>
+<!--vue-app 根容器-->
+<div id="vue-app">
+    <p id="name">{{name}}</p>
+    <p id="nickname">{{nickName}}</p>
+    <a v-bind:href="website">Web 神嗑</a>
+    <p v-html="websiteTag">点一下</p>
+    <input type="button" value="怼你啊" @click.once="Hello('MaDa')">
+    <input type="button" value="怼你啊" v-on:dblclick="Hello('MaDa')">
+
+    <div id="scroll" v-on:mousemove="UpdateXY">{{x}},{{y}}--<span v-on:mousemove.stop="">Stop Moving</span></div>
+    <a v-on:click.prevent="Hello('MaDa')" v-bind:href="website">Web 神嗑</a>
+
+    <hr>
+    <h1> 双向数据绑定 input select textarea</h1>
+    <label>姓名：</label>
+    <input ref="name" type="text" v-on:keyup.enter="logSomething()" v-model="inputName">
+    <p>{{inputName}}</p>
+    <br>
+    <label>年龄：</label>
+    <input type="text">
+    <hr>
+    <h1> Computed计算属性</h1>
+    <button v-on:click="a++">Add to A</button>
+    <button v-on:click="b++">Add to B</button>
+    <p>A - {{a}}</p>
+    <p>B - {{b}}</p>
+    <p>Age + A = {{addToA}}</p> <!--computed调用方式{{addToA}}不带()-->
+    <p>Age + B = {{addToB}}</p>
+    <hr>
+    <h1>动态绑定Css</h1>
+    <h2>示例一</h2>
+    <div v-bind:class="{changeColor:changeColor}" v-on:click="changeColor=!changeColor"><span>LJN</span></div>
+    <h2>示例二</h2>
+    <div v-bind:class="compClasses"><span>NMD</span></div>
+    <button v-on:click="changeColor=!changeColor"> Change Color</button>
+    <button v-on:click="changeLength=!changeLength"> Change Length</button>
+    <hr>
+    <h1>v-if 条件语句</h1>
+    <button v-on:click="error=!error"> Toggle Error</button>
+    <button v-on:click="success=!success"> Toggle Success</button>
+    <button v-on:click="success=!success"> v-show</button>
+    <p v-if="error">网络连接错误：404</p>
+    <p v-else-if="success">网络连接成功：200</p>
+    <p v-show="success">v-show</p><!--是否占位区别-->
+    <hr>
+    <h1>v-for 循环</h1>
+
+    <ul>
+        <li v-for="character in characters">{{character}}</li>
+    </ul>
+
+    <ul>
+        <li v-for="(user,index) in users">{{index}}--{{user.name}}--{{user.age}}</li>
+    </ul>
+    <!--列表渲染模板-->
+    <template v-for="(user,index) in users">
+        <p>Index--{{index}}...Name--{{user.name}}...{{user.age}}</p>
+    </template>
+    <hr>
+    <template v-for="user in users">
+
+        <div v-for="(key,value) in user">
+            <p>Key--{{key}}----Value--{{value}}</p>
+        </div>
+
+    </template>
+    <hr>
+    <h1> 组件使用</h1>
+    <first-component></first-component>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+<script src="js/main.js"></script><!--一般放在最下面 顺序执行-->
+
+</body>
+
+</html>

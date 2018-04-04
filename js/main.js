@@ -80,7 +80,8 @@ new Vue({
             {name: "黑崎一护", age: 27},
             {name: "路飞", age: 19},
             {name: "武藤游戏", age: 16}
-        ]
+        ],
+        color: "blue"
     },
     methods: {//当methods被触发是 都会执行  耗费性能  Computed
         Hello: function (str) {
@@ -100,6 +101,7 @@ new Vue({
          addToB: function () {
              return this.b + this.age;
          }*/
+
     },
     computed: {
 //耗时操作 使用
@@ -116,13 +118,15 @@ new Vue({
             }
         }
 
-    }
-});
+    },
+    directives: {
+        ljn: {
+            inserted: function (el, binding) {
+                el.style = "color" + binding.value;
+            }
+        }
+    },
 
-
-new Vue({
-    el: "#vue-app-ex",
-    data: {}
 });
 
 

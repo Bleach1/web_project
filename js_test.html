@@ -17,8 +17,9 @@
 
     <div id="scroll" v-on:mousemove="UpdateXY">{{x}},{{y}}--<span v-on:mousemove.stop="">Stop Moving</span></div>
     <a v-on:click.prevent="Hello('MaDa')" v-bind:href="website">Web 神嗑</a>
-
     <hr>
+
+
     <h1> 双向数据绑定 input select textarea</h1>
     <label>姓名：</label>
     <input ref="name" type="text" v-on:keyup.enter="logSomething()" v-model="inputName">
@@ -27,6 +28,8 @@
     <label>年龄：</label>
     <input type="text">
     <hr>
+
+
     <h1> Computed计算属性</h1>
     <button v-on:click="a++">Add to A</button>
     <button v-on:click="b++">Add to B</button>
@@ -49,8 +52,13 @@
     <button v-on:click="success=!success"> v-show</button>
     <p v-if="error">网络连接错误：404</p>
     <p v-else-if="success">网络连接成功：200</p>
+    <p v-else="error_code">网络连接错误：500</p>
     <p v-show="success">v-show</p><!--是否占位区别-->
     <hr>
+
+    <span v-text="name"></span><br/>
+
+
     <h1>v-for 循环</h1>
 
     <ul>
@@ -75,6 +83,7 @@
     <hr>
     <h1> 组件使用</h1>
     <first-component></first-component>
+    <img  src="http://img.taopic.com/uploads/allimg/120727/201995-120HG1030762.jpg">
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 <script src="js/main.js"></script><!--一般放在最下面 顺序执行-->
